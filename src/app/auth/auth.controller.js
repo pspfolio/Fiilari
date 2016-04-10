@@ -5,12 +5,10 @@
 		.module('app.auth')
 		.controller('AuthController', AuthController);
 	
-	AuthController.$inject = ['$firebaseAuth'];
+	AuthController.$inject = ['$location','$firebaseAuth', 'authService'];
 	
-	function AuthController($firebaseAuth) {
+	function AuthController($location, $firebaseAuth, authService) {
 		var vm = this;
-		var firebaseReference = new Firebase('https://fiilarit.firebaseio.com/');
-		var firebaseAuthObject = $firebaseAuth(firebaseReference);
 		
 		vm.company = {
 			name: '',
@@ -19,11 +17,26 @@
 		};
 		
 		vm.register = register;
+		vm.login = login;
 		
 		function register(company) {
-			console.log(company);
-			firebaseAuthObject.$createUser(company);
+			return authService.register(company)
+				.then(function() {
+					vm.login(company);
+				}).catch(function (error) {
+					console.log(error);
+				});
 		}
+		
+		function login(company) {
+			return authService.login(company)
+				.then(function() {
+					$location.path('/userlist');
+				}).catch(function (error) {
+					console.log(error);
+				});
+		}
+
 	}
 	
 }());

@@ -16,15 +16,7 @@
 	<body>
 		<div class="border"></div>
 		<div class="wrapper">
-			<div class="main_header clearfix">
-				<div class="logo">
-					<h1>Fiilarit<span>osuvateksti</span></h1>
-				</div>
-				<nav class="nav">
-					<a href="#">Register</a>
-					<a href="#">LogIn</a>
-				</nav>
-			</div>
+			<ps-navbar></ps-navbar>
 			<ng-view></ng-view>
 		</div>
 		<!--Third-party JS-->
@@ -42,10 +34,15 @@
 		<script src="app/landing/landing.module.js"></script>
 		<script src="app/landing/config.route.js"></script>
 		
+		<!-- Layout module -->
+		<script src="app/layout/layout.module.js"></script>
+		<script src="app/layout/navbar.directive.js"></script>
+		
 		<!-- Auth module -->
 		<script src="app/auth/auth.module.js"></script>
 		<script src="app/auth/config.route.js"></script>
 		<script src="app/auth/auth.controller.js"></script>
+		<script src="app/auth/auth.service.js"></script>
 		
 		<!-- User module -->
 		<script src="app/user/user.module.js"></script>
