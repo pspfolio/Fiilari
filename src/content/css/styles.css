@@ -34,7 +34,7 @@ body {
 /* line 57, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .logo h1 {
   float: left;
-  margin: 0 0 0 1em;
+  margin: 0 0 0 0;
   text-transform: uppercase;
   font-size: 2em;
   padding-top: .3em;
