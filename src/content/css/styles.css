@@ -78,4 +78,13 @@ body {
   margin-top: 1.5em;
   text-align: center; }
 
+/* line 107, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.user-form {
+  margin-bottom: 2em; }
+
+/* line 112, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.form-group .form-label {
+  padding: 0 1em;
+  color: #34314c; }
+
 /*# sourceMappingURL=styles.css.map */

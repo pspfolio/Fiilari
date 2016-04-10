@@ -1,1 +1,29 @@
-<h3>{{vm.text}}</h3>
+<form ng-submit="vm.addUser(vm.user)" class="form-inline user-form">
+	<div class="form-group">
+		<label class="form-label" for="userId">ID</label>
+		<input ng-model="vm.user.id" type="number"class="form-control" id="userId" placeholder="23632" required>
+	</div>
+	<div class="form-group">
+		<label class="form-label" for="userName">Name</label>
+		<input ng-model="vm.user.name" type="text" class="form-control"  id="userName" placeholder="Matti Meikäläinen" required>
+	</div>
+	
+	<button class="btn btn-success" type="submit">Add user</button>
+</form>
+
+<div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in vm.users">
+				<td> {{ user.id }} </td>
+				<td> {{ user.name }} </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
