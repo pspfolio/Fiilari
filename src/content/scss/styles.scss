@@ -103,3 +103,14 @@ body {
 		text-align: center;
 	}
 }
+
+.user-form {
+	margin-bottom: 2em;
+}
+
+.form-group {
+	.form-label {
+		padding: 0 1em;
+		color: $main;
+	}
+}
