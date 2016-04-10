@@ -79,3 +79,27 @@ body {
 		text-decoration: none;
 	}
 }
+
+.module {
+	.title {
+		text-align: center;
+		font-size: 2em;
+		font-weight: 300;
+		color: $main;
+		span {
+			font-weight: 300;
+			font-size: .9em;
+			color: $secondary;
+		}
+	}
+	
+	.content {
+		margin-top: 1.5em;
+		font-size: 1.1em;
+	}
+	
+	.register {
+		margin-top: 1.5em;
+		text-align: center;
+	}
+}

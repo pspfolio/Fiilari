@@ -56,4 +56,26 @@ body {
     margin-left: 1em;
     text-decoration: none; }
 
+/* line 84, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.module .title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  color: #34314c; }
+  /* line 89, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  .module .title span {
+    font-weight: 300;
+    font-size: .9em;
+    color: #9592ad; }
+
+/* line 96, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.module .content {
+  margin-top: 1.5em;
+  font-size: 1.1em; }
+
+/* line 101, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.module .register {
+  margin-top: 1.5em;
+  text-align: center; }
+
 /*# sourceMappingURL=styles.css.map */
