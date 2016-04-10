@@ -4,7 +4,8 @@
 	</div>
 	<nav class="nav">
 		<div ng-show="vm.isLoggedIn()">
-			<a href="#" ng-click="vm.logout()">LogOut</a>
+			<a href="#/userlist">User list</a>
+			<a href="" ng-click="vm.logout()">LogOut</a>
 		</div>
 		<div ng-hide="vm.isLoggedIn()">
 			<a href="#/register">Register</a>

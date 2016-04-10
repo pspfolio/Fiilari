@@ -20,10 +20,15 @@
 		vm.user = new User();
 		vm.users = $firebaseArray(fireUsers);
 		vm.addUser = addUser;
+		vm.removeUser = removeUser;
 		
 		function addUser(user) {
 			vm.users.$add(user);
 			vm.user = new User();
+		}
+		
+		function removeUser(user) {
+			vm.users.$remove(user);
 		}
 	}
 }());
