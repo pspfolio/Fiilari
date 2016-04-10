@@ -1,0 +1,15 @@
+<div class="main_header clearfix">
+	<div class="logo">
+		<h1>Fiilarit<span>osuvateksti</span></h1>
+	</div>
+	<nav class="nav">
+		<div ng-show="vm.isLoggedIn()">
+			<a href="#" ng-click="vm.logout()">LogOut</a>
+		</div>
+		<div ng-hide="vm.isLoggedIn()">
+			<a href="#/register">Register</a>
+			<a href="#/login">LogIn</a>
+		</div>
+
+	</nav>
+			</div>

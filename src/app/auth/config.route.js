@@ -12,6 +12,11 @@
 			templateUrl: 'app/auth/register.html',
 			controller: 'AuthController',
 			controllerAs: 'vm'
+		})
+		.when('/login', {
+			templateUrl: 'app/auth/login.html',
+			controller: 'AuthController',
+			controllerAs: 'vm'
 		});
 	}
 	
