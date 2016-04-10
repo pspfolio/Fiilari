@@ -11,5 +11,6 @@
 		// Custom modules
 		'app.auth',
 		'app.landing',
+		'app.user'
 	]);
 }());
