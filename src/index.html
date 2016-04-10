@@ -8,11 +8,25 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<!--Optional theme-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<!-- Theme -->
 		<link rel="stylesheet" href="content/css/styles.css">
 		
 	</head>
 	<body>
+		<div class="border"></div>
+		<div class="wrapper">
+			<div class="main_header clearfix">
+				<div class="logo">
+					<h1>Fiilarit<span>osuvateksti</span></h1>
+				</div>
+				<nav class="nav">
+					<a href="#">Register</a>
+					<a href="#">LogIn</a>
+				</nav>
+			</div>
+			<ng-view></ng-view>
+		</div>
 		<!--Third-party JS-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

@@ -1,5 +1,59 @@
-/* line 1, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 10, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 body {
-  font-family: 'roboto'; }
+  font-family: 'Open Sans', sans-serif; }
+
+/* line 14, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.border {
+  height: 6px;
+  border: 0;
+  background-color: #ff7473;
+  background-image: linear-gradient(to right, #ff7473, #ff7473 25%, #ffc952 25%, #ffc952 50%, #47b8e0 50%, #47b8e0 75%, #3ac569 75%, #3ac569 100%, #3ac569 100%);
+  -webkit-background-size: 50% 100%;
+  -moz-background-size: 50% 100%;
+  background-size: 50% 100%; }
+
+/* line 37, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.wrapper {
+  width: 750px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+/* line 43, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.clearfix:before .clearfix:after {
+  content: " ";
+  display: table; }
+
+/* line 48, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 52, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.main_header {
+  margin: 5em 0 3em 0; }
+
+/* line 57, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.logo h1 {
+  float: left;
+  margin: 0 0 0 1em;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding-top: .3em;
+  color: #34314c;
+  font-weight: bold; }
+  /* line 65, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  .logo h1 span {
+    font-weight: 400;
+    color: #9592ad; }
+
+/* line 72, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.nav {
+  float: right;
+  padding-top: 1em;
+  margin-right: 1em; }
+  /* line 76, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  .nav a {
+    color: #9592ad;
+    margin-left: 1em;
+    text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */
