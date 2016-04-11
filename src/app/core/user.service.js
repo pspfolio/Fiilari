@@ -5,9 +5,9 @@
 		.module('app.core')
 		.factory('userService', UserService);
 	
-	UserService.$inject = ['$firebaseArray'];
+	UserService.$inject = ['$firebaseArray', 'firebaseDataService'];
 	
-	function UserService($firebaseArray) {
+	function UserService($firebaseArray, firebaseDataService) {
 		
 		var users = null;
 		
@@ -24,10 +24,9 @@
 			this.name = '';
 		}
 		
-		//var fireUsers = new Firebase('https://fiilarit.firebaseio.com/users');
 		function getUsersByCompany(companyId) {
 			if(!users) {
-				users = $firebaseArray(new Firebase('https://fiilarit.firebaseio.com/users').child(companyId).child('users'));
+				users = $firebaseArray(firebaseDataService.companies.child(companyId).child('users'));
 			}
 			
 			return users;
