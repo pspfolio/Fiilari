@@ -5,9 +5,9 @@
 		.module('app.auth')
 		.factory('authService', authService);
 	
-	authService.$inject = ['$firebaseAuth'];
+	authService.$inject = ['$firebaseAuth', 'userService'];
 	
-	function authService($firebaseAuth) {
+	function authService($firebaseAuth, userService) {
 		var firebaseAuthObject = $firebaseAuth(new Firebase('https://fiilarit.firebaseio.com/'));
 		var service = {
 			firebaseAuthObject: firebaseAuthObject,
@@ -24,7 +24,6 @@
 		}
 		
 		function login(company) {
-			console.log(company);
 			return firebaseAuthObject.$authWithPassword(company);
 		}
 		
@@ -34,6 +33,7 @@
 		
 		function logout() {
 			firebaseAuthObject.$unauth();
+			userService.reset();
 		}
 	}
 	

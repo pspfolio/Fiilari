@@ -5,26 +5,22 @@
 		.module('app.user')
 		.controller('UserController', UserController);
 	
-	UserController.$inject = ['$firebaseArray'];
+	UserController.$inject = ['$firebaseArray', 'userService', 'company'];
 	
-	function UserController($firebaseArray) {
+	function UserController($firebaseArray, userService, company) {
 		var vm = this;
-		
+		console.log('company', company);
 		var fireUsers = new Firebase('https://fiilarit.firebaseio.com/users');
 		
-		function User() {
-			this.id = null;
-			this.name = '';
-		}
-		
-		vm.user = new User();
-		vm.users = $firebaseArray(fireUsers);
+		vm.user = new userService.User();
+		vm.users = userService.getUserByCompany(company.uid);
 		vm.addUser = addUser;
 		vm.removeUser = removeUser;
 		
 		function addUser(user) {
+			console.log(vm.users);
 			vm.users.$add(user);
-			vm.user = new User();
+			vm.user = new userService.User();
 		}
 		
 		function removeUser(user) {

@@ -11,7 +11,15 @@
 		$routeProvider.when('/userlist', {
 			templateUrl: 'app/user/userList.html',
 			controller: 'UserController',
-			controllerAs: 'vm'
+			controllerAs: 'vm',
+			resolve: {company: resolveCompany}
 		});
 	}
+	
+	resolveCompany.$inject = ['authService'];
+	
+	function resolveCompany(authService) {
+		return authService.firebaseAuthObject.$requireAuth();
+	}
+	
 }());
