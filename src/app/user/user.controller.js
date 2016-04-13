@@ -5,12 +5,10 @@
 		.module('app.user')
 		.controller('UserController', UserController);
 	
-	UserController.$inject = ['$firebaseArray', 'userService', 'company'];
+	UserController.$inject = ['userService', 'company'];
 	
-	function UserController($firebaseArray, userService, company) {
+	function UserController(userService, company) {
 		var vm = this;
-		console.log('company', company);
-		var fireUsers = new Firebase('https://fiilarit.firebaseio.com/users');
 		
 		vm.user = new userService.User();
 		vm.users = userService.getUserByCompany(company.uid);
