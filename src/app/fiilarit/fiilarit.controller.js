@@ -5,13 +5,14 @@
 		.module('app.fiilarit')
 		.controller('FiilaritController', FiilaritController);
 	
-	FiilaritController.$inject = ['$firebaseArray','userService', 'firebaseDataService', 'company'];
-	function FiilaritController($firebaseArray, userService, firebaseDataService, company) {
+	FiilaritController.$inject = ['userService', 'fiilaritService', 'company'];
+	
+	function FiilaritController(userService, fiilaritService, company) {
 		var vm = this;
 		vm.selectedUser = null;
 		vm.verifySuccess = null;
 		vm.users = userService.getUserByCompany(company.uid);
-		vm.ratings = $firebaseArray(firebaseDataService.ratings);
+		vm.ratings = fiilaritService.getFiilariRatings();
 		vm.addFiilis = addFiilis;
 		vm.verifyUser = verifyUser;
 		vm.registerFiilari = registerFiilari;
