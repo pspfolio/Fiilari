@@ -22,6 +22,7 @@
 		function User() {
 			this.id = null;
 			this.name = '';
+			this.fiilari = [];
 		}
 		
 		function getUsersByCompany(companyId) {

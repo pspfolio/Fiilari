@@ -25,11 +25,8 @@
 		<button class="btn btn-success" ng-click="vm.verifyUser(inputUserId)">Verify</button>
 	</div>
 	<div ng-show="vm.verifySuccess">
-		<ul>
-			<li>So sad</li>
-			<li>Ok</li>
-			<li>Happy</li>
-			<li>Pumped</li>
+		<ul ng-repeat="rate in vm.ratings">
+			<li ng-click="vm.registerFiilari(rate.rate)">{{rate.fiilari}}</li>
 		</ul>
 	</div>
 </div>
