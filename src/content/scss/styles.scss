@@ -114,3 +114,38 @@ body {
 		color: $main;
 	}
 }
+
+.userlist_row {
+	button {
+		float: right;
+		margin-right: 2em;
+	}
+}
+
+.rating_list {
+	margin: 0 auto;
+	max-width: 75%;
+	padding: 0;
+	margin-top: 3em;
+	li {
+		list-style-type: none;
+		float: left;
+		text-align: center;
+		padding: 0 2em;
+	}
+	img {
+		width: 95px;
+		-webkit-transition: width .3s ease-in;
+		transition: width .3s ease-in;
+		cursor: pointer;
+		&:hover {
+			width: 100px;
+		}
+	}
+	.rating_text {
+		font-size: 1.4em;
+		color: $secondary;
+		display: block;
+		margin-top: .5em;
+	}
+}

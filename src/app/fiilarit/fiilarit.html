@@ -7,7 +7,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="user in vm.users">
+			<tr class="userlist_row" ng-repeat="user in vm.users">
 				<td> {{ user.name }} </td>
 				<td>
 					<button class="btn btn-primary" ng-click="vm.addFiilis(user)">Add fiilis</button>
@@ -25,8 +25,11 @@
 		<button class="btn btn-success" ng-click="vm.verifyUser(inputUserId)">Verify</button>
 	</div>
 	<div ng-show="vm.verifySuccess">
-		<ul ng-repeat="rate in vm.ratings">
-			<li ng-click="vm.registerFiilari(rate.rate)">{{rate.fiilari}}</li>
+		<ul class="rating_list">
+			<li ng-repeat="rate in vm.ratings">
+					<img ng-click="vm.registerFiilari(rate.rate)" src="../src/content/images/happy.svg" alt="fiilari" /><br />
+					<span class="rating_text">{{rate.fiilari}}</span>
+			</li>
 		</ul>
 	</div>
 </div>
