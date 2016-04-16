@@ -1,0 +1,16 @@
+<div ng-show="vm.selectedUser">
+	<h4>Hello, {{vm.selectedUser.name}}.</h4>
+	<div ng-hide="vm.verifySuccess">
+		<label for="userId">Please verify yourself with the userid.</label>
+		<input ng-model="inputUserId" class="form-control" type="number" id="userId" placeholder="user id" required><br />
+		<button class="btn btn-success" ng-click="vm.verifyUser(inputUserId)">Verify</button>
+	</div>
+	<div ng-show="vm.verifySuccess">
+		<ul class="rating_list">
+			<li ng-repeat="rate in vm.ratings | orderBy: 'rate'">
+					<img ng-click="vm.registerFiilari(rate.rate)" ng-src="../src/content/images/{{rate.imgsrc}}" alt="fiilari" /><br />
+					<span class="rating_text">{{rate.fiilari}}</span>
+			</li>
+		</ul>
+	</div>
+</div>

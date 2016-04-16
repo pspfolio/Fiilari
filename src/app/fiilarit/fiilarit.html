@@ -10,26 +10,11 @@
 			<tr class="userlist_row" ng-repeat="user in vm.users">
 				<td> {{ user.name }} </td>
 				<td>
-					<button class="btn btn-primary" ng-click="vm.addFiilis(user)">Add fiilis</button>
+					<button class="btn btn-primary" ng-click="vm.selectUser(user)">Add fiilis</button>
 				</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
-<div ng-show="vm.selectedUser">
-	<h4>Hello, {{vm.selectedUser.name}}.</h4>
-	<div ng-hide="vm.verifySuccess">
-		<label for="userId">Please verify yourself with the userid.</label>
-		<input ng-model="inputUserId" class="form-control" type="number" id="userId" placeholder="user id" required><br />
-		<button class="btn btn-success" ng-click="vm.verifyUser(inputUserId)">Verify</button>
-	</div>
-	<div ng-show="vm.verifySuccess">
-		<ul class="rating_list">
-			<li ng-repeat="rate in vm.ratings | orderBy: 'rate'">
-					<img ng-click="vm.registerFiilari(rate.rate)" ng-src="../src/content/images/{{rate.imgsrc}}" alt="fiilari" /><br />
-					<span class="rating_text">{{rate.fiilari}}</span>
-			</li>
-		</ul>
-	</div>
-</div>
+<ps-add-fiilari selected-user="vm.selectedUser" users="vm.users"></ps-add-fiilari>
