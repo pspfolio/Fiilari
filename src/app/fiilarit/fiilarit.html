@@ -26,8 +26,8 @@
 	</div>
 	<div ng-show="vm.verifySuccess">
 		<ul class="rating_list">
-			<li ng-repeat="rate in vm.ratings">
-					<img ng-click="vm.registerFiilari(rate.rate)" src="../src/content/images/happy.svg" alt="fiilari" /><br />
+			<li ng-repeat="rate in vm.ratings | orderBy: 'rate'">
+					<img ng-click="vm.registerFiilari(rate.rate)" ng-src="../src/content/images/{{rate.imgsrc}}" alt="fiilari" /><br />
 					<span class="rating_text">{{rate.fiilari}}</span>
 			</li>
 		</ul>
