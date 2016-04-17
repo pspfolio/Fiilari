@@ -2,7 +2,7 @@
 	<h4>Hello, {{vm.selectedUser.name}}.</h4>
 	<div ng-hide="vm.verifySuccess">
 		<label for="userId">Please verify yourself with the userid.</label>
-		<input ng-model="inputUserId" class="form-control" type="number" id="userId" placeholder="user id" required><br />
+		<input ng-model="inputUserId" class="form-control" type="number" id="userId" placeholder="user id" required autofocus><br />
 		<button class="btn btn-success" ng-click="vm.verifyUser(inputUserId)">Verify</button>
 	</div>
 	<div ng-show="vm.verifySuccess">
