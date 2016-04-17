@@ -15,6 +15,7 @@
 			User: User,
 			getUserByCompany: getUsersByCompany,
 			reset: reset,
+			getUserById: getUserById
 		};
 		
 		return service;
@@ -31,6 +32,10 @@
 			}
 			
 			return users;
+		}
+		
+		function getUserById(companyId, userId) {
+			return $firebaseObject(firebaseDataService.companies.child(companyId).child('users').child(userId));
 		}
 				
 		function reset() {

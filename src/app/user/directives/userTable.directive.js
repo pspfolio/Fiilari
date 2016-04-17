@@ -22,6 +22,7 @@
 		var vm = this;
 		
 		vm.removeUser = removeUser;
+		console.log(vm.users);
 		
 		function removeUser(user) {
 			vm.users.$remove(user);
