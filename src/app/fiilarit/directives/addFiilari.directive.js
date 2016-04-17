@@ -19,6 +19,7 @@
 		};
 		
 		addFiilariCtrl.$inject = ['fiilaritService'];
+		
 		function addFiilariCtrl(fiilaritService) {
 			var vm = this;
 			vm.ratings = fiilaritService.getFiilariRatings();

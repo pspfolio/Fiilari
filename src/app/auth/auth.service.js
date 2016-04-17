@@ -20,7 +20,8 @@
 		return service;
 		
 		function register(company) {
-			return firebaseAuthObject.$createUser(company);
+			var createUser = firebaseAuthObject.$createUser(company);
+			return createUser;
 		}
 		
 		function login(company) {

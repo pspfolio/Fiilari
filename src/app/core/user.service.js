@@ -5,16 +5,16 @@
 		.module('app.core')
 		.factory('userService', UserService);
 	
-	UserService.$inject = ['$firebaseArray', 'firebaseDataService'];
+	UserService.$inject = ['$firebaseArray', '$firebaseObject', 'firebaseDataService'];
 	
-	function UserService($firebaseArray, firebaseDataService) {
+	function UserService($firebaseArray, $firebaseObject, firebaseDataService) {
 		
 		var users = null;
 		
 		var service = {
 			User: User,
 			getUserByCompany: getUsersByCompany,
-			reset: reset
+			reset: reset,
 		};
 		
 		return service;
@@ -32,7 +32,7 @@
 			
 			return users;
 		}
-		
+				
 		function reset() {
 			users.$destroy();
 			users = null;
