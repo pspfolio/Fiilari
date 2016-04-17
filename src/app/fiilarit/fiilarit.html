@@ -1,19 +1,24 @@
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr class="userlist_row" ng-repeat="user in vm.users">
-			<td> {{ user.name }} </td>
-			<td>
-				<button class="btn btn-primary" ng-click="vm.selectUser(user)">Add fiilis</button>
-			</td>
-		</tr>
-	</tbody>
-</table>
+<div ng-show="vm.users.length > 0">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="userlist_row" ng-repeat="user in vm.users">
+				<td> {{ user.name }} </td>
+				<td>
+					<button class="btn btn-primary" ng-click="vm.selectUser(user)">Add fiilis</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
+<div ng-hide="vm.users.length > 0">
+	<h3>Sorry no users added yet :(</h3>
+</div>
 
 <ps-add-fiilari selected-user="vm.selectedUser" users="vm.users"></ps-add-fiilari>
