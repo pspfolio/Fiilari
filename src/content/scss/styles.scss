@@ -62,11 +62,19 @@ body {
 		padding-top: .3em;
 		color: $main;
 		font-weight: bold;
-		span {
-			font-weight: 400;
-			color: $secondary;
-		}
 	}
+	.companyNameBlock {
+		float: left;
+		.companyName {
+		display: inline-block;
+		padding-top: .1em;
+		font-weight: 300;
+		font-size: 2em;
+		color: $secondary;
+		text-transform: uppercase;
+	}
+	}
+	
 }
 
 .nav {

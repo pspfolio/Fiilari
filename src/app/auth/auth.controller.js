@@ -36,7 +36,7 @@
 		function login(company) {
 			return authService.login(company)
 				.then(function() {
-					$location.path('/userlist');
+					$location.path('/fiilarit');
 				}).catch(function (error) {
 					console.log(error);
 				});
