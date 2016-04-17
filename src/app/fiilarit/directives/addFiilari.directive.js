@@ -18,13 +18,14 @@
 			bindToController: true
 		};
 		
-		addFiilariCtrl.$inject = ['fiilaritService'];
+		addFiilariCtrl.$inject = ['$timeout', 'fiilaritService'];
 		
-		function addFiilariCtrl(fiilaritService) {
+		function addFiilariCtrl($timeout, fiilaritService) {
 			var vm = this;
 			vm.ratings = fiilaritService.getFiilariRatings();
 			vm.verifyUser = verifyUser;
 			vm.registerFiilari = registerFiilari;
+			vm.showUserMessage = false;
 			
 			function verifyUser(userId) {
 				vm.verifySuccess = vm.selectedUser.id === userId;
@@ -36,7 +37,11 @@
 				}
 				vm.selectedUser.fiilari.push(rate);
 				vm.users.$save(vm.selectedUser);
+				vm.showUserMessage = true;
 				reset();
+				$timeout(function() {
+					vm.showUserMessage = false;
+				}, 2000);
 			}
 			
 			function reset() {
