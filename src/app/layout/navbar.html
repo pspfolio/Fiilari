@@ -1,6 +1,10 @@
 <div class="main_header clearfix">
 	<div class="logo">
 		<h1>Fiilarit</h1>
+		<div ng-show="vm.getCompany()">
+			<h3 ng-bind="vm.company.name"></h3>
+		</div>
+		
 	</div>
 	<nav class="nav">
 		<div ng-show="vm.isLoggedIn()">
