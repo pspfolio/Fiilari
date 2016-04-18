@@ -128,4 +128,9 @@ body {
     display: block;
     margin-top: .5em; }
 
+/* line 162, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+.user_info .userid {
+  color: #9592ad;
+  font-weight: 300; }
+
 /*# sourceMappingURL=styles.css.map */

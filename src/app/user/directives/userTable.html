@@ -9,7 +9,7 @@
 	<tbody>
 		<tr ng-repeat="user in vm.users">
 			<td> {{ user.id }} </td>
-			<td> {{ user.name }} </td>
+			<td> <a ng-href="#/user/{{user.$id}}">{{ user.name }}</a></td>
 			<td>
 				<button class="btn btn-danger" ng-click="vm.removeUser(user)">Remove</button>
 			</td>

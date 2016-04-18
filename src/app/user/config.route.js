@@ -13,6 +13,12 @@
 			controller: 'UserController',
 			controllerAs: 'vm',
 			resolve: {company: resolveCompany}
+		})
+		.when('/user/:userId', {
+			templateUrl: 'app/user/user.html',
+			controller: 'UserController',
+			controllerAs: 'vm',
+			resolve: {company: resolveCompany}
 		});
 	}
 	

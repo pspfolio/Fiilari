@@ -9,6 +9,7 @@
 	
 	function UserController(userService, company) {
 		var vm = this;
+		vm.company = company;
 		vm.users = userService.getUserByCompany(company.uid);
 	}
 }());
