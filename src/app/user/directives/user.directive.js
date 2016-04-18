@@ -21,7 +21,6 @@
 		function psUserController($routeParams, userService) {
 			var vm = this;
 			vm.user = userService.getUserById(vm.companyId, $routeParams.userId);
-			console.log(vm.user);
 		}
 	}
 	
