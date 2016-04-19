@@ -1,5 +1,5 @@
 $main: 		#34314c;
-$secondary: #9592ad;
+$secondary: #9E9E9E;
 $border: 	#d9dee9;
 
 $sad: 		#ff7473;
@@ -72,6 +72,7 @@ body {
 		font-size: 2em;
 		color: $secondary;
 		text-transform: uppercase;
+		margin-left: .5em;
 	}
 	}
 	
@@ -168,4 +169,26 @@ body {
 .overall_fiilari {
 	color: $secondary;
 	font-size: 1.2em;
+}
+
+@media only screen and (max-width: 500px) {
+	.logo {
+		text-align: center;
+		h1 {
+			float:none;
+		}
+		.companyNameBlock {
+			float: none;
+			.companyName {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.nav {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		float: none;
+	}
 }
