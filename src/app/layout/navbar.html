@@ -8,13 +8,13 @@
 	</div>
 	<nav class="nav">
 		<div ng-show="vm.isLoggedIn()">
-			<a href="#/fiilarit">Fiilarit</a>
-			<a href="#/userlist">User list</a>
+			<a ng-class="{active: vm.isActive('/fiilarit')}" href="#/fiilarit">Fiilarit</a>
+			<a ng-class="{active: vm.isActive('/userlist')}"href="#/userlist">Userlist</a>
 			<a href="" ng-click="vm.logout()">LogOut</a>
 		</div>
 		<div ng-hide="vm.isLoggedIn()">
-			<a href="#/register">Register</a>
-			<a href="#/login">LogIn</a>
+			<a ng-class="{active: vm.isActive('/register')}" href="#/register">Register</a>
+			<a ng-class="{active: vm.isActive('/login')}" href="#/login">LogIn</a>
 		</div>
 
 	</nav>

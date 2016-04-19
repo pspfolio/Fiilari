@@ -23,7 +23,7 @@
 		vm.isLoggedIn = authService.isLoggedIn;
 		vm.logout = logout;
 		vm.getCompany = getCompany;
-		vm.company = undefined;
+		vm.isActive = isActive;
 				
 		function getCompany() {
 			var user = vm.isLoggedIn();
@@ -33,6 +33,11 @@
 				});
 			}
 			return vm.company;
+		}
+		
+		function isActive(path) {
+			console.log($location.path());
+			return path === $location.path();
 		}
 		
 		function logout() {

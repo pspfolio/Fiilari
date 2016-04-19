@@ -39,12 +39,13 @@ body {
   font-size: 2em;
   padding-top: .3em;
   color: #34314c;
-  font-weight: bold; }
+  font-weight: bold;
+  letter-spacing: .2em; }
 
-/* line 66, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 67, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .logo .companyNameBlock {
   float: left; }
-  /* line 68, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  /* line 69, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
   .logo .companyNameBlock .companyName {
     display: inline-block;
     padding-top: .1em;
@@ -54,105 +55,109 @@ body {
     text-transform: uppercase;
     margin-left: .5em; }
 
-/* line 81, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 82, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .nav {
   float: right;
   padding-top: 1em;
   margin-right: 1em; }
-  /* line 85, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  /* line 86, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
   .nav a {
     color: #9E9E9E;
     margin-left: 1em;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 1.1em; }
+  /* line 92, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  .nav .active {
+    border-bottom: 1px solid #d9dee9; }
 
-/* line 93, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 98, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .module .title {
   text-align: center;
   font-size: 2em;
   font-weight: 300;
   color: #34314c; }
-  /* line 98, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  /* line 103, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
   .module .title span {
     font-weight: 300;
     font-size: .9em;
     color: #9E9E9E; }
 
-/* line 105, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 110, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .module .content {
   margin-top: 1.5em;
   font-size: 1.1em; }
 
-/* line 110, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 115, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .module .register {
   margin-top: 1.5em;
   text-align: center; }
 
-/* line 116, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 121, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .user-form {
   margin-bottom: 2em; }
 
-/* line 121, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 126, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .form-group .form-label {
   padding: 0 1em;
   color: #34314c; }
 
-/* line 128, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 133, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .userlist_row button {
   float: right;
   margin-right: 2em; }
 
-/* line 134, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 139, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .rating_list {
   margin: 0 auto;
   max-width: 75%;
   padding: 0;
   margin-top: 3em; }
-  /* line 139, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  /* line 144, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
   .rating_list li {
     list-style-type: none;
     float: left;
     text-align: center;
     padding: 0 2em; }
-  /* line 145, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  /* line 150, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
   .rating_list img {
     width: 95px;
     -webkit-transition: width 0.3s ease-in;
     transition: width 0.3s ease-in;
     cursor: pointer; }
-    /* line 150, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+    /* line 155, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
     .rating_list img:hover {
       width: 100px; }
-  /* line 154, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  /* line 159, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
   .rating_list .rating_text {
     font-size: 1.4em;
     color: #9E9E9E;
     display: block;
     margin-top: .5em; }
 
-/* line 163, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 168, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .user_info .userid {
   color: #9E9E9E;
   font-weight: 300; }
 
-/* line 169, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+/* line 174, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
 .overall_fiilari {
   color: #9E9E9E;
   font-size: 1.2em; }
 
-@media only screen and (max-width: 500px) {
-  /* line 175, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+@media only screen and (max-width: 565px) {
+  /* line 180, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
   .logo {
     text-align: center; }
-    /* line 177, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+    /* line 182, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
     .logo h1 {
       float: none; }
-    /* line 180, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+    /* line 185, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
     .logo .companyNameBlock {
       float: none; }
-      /* line 182, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+      /* line 187, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
       .logo .companyNameBlock .companyName {
         margin-left: 0; }
-  /* line 188, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
+  /* line 193, C:/Projects/Fiilari/Fiilari/src/content/scss/styles.scss */
   .nav {
     display: block;
     margin: 0 auto;
