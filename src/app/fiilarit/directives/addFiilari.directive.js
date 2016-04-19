@@ -35,7 +35,8 @@
 				if(!vm.selectedUser.fiilari) {
 					vm.selectedUser.fiilari = [];
 				}
-				vm.selectedUser.fiilari.push(rate);
+				var fiilari = {rate: rate, datetime: moment().format()};
+				vm.selectedUser.fiilari.push(fiilari);
 				vm.users.$save(vm.selectedUser);
 				vm.showUserMessage = true;
 				reset();
