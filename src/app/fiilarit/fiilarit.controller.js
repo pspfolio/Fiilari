@@ -9,7 +9,7 @@
 	
 	function FiilaritController(userService, company) {
 		var vm = this;
-		vm.users = userService.getUserByCompany(company.uid);
+		vm.users = userService.getUsersByCompany(company.uid);
 		vm.selectUser = selectUser;
 		
 		function selectUser(user) {
