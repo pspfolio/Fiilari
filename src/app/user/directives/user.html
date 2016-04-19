@@ -1,3 +1,19 @@
 <div class="user_info">
 	<h3 class="username"><span class="userid"> {{vm.user.id}} - </span>{{vm.user.name}}</h3>
+	<div class="overall_fiilari">
+		<p>Overall feeling: <span ng-bind="vm.countOverallFiilari()"></span></p>
+	</div>
 </div>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Datetime</th>
+			<th>Fiilari</th>
+		</tr>
+	</thead>
+	<tr ng-repeat="fiilari in vm.user.fiilari | orderBy: '-datetime'">
+		<td>{{fiilari.datetime}}</td>
+		<td>{{fiilari.rate}}</td>
+	</tr>
+</table>

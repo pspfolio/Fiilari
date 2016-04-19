@@ -18,9 +18,19 @@
 		};
 		
 		psUserController.$inject = ['$routeParams', 'userService'];
+		
 		function psUserController($routeParams, userService) {
 			var vm = this;
 			vm.user = userService.getUserById(vm.companyId, $routeParams.userId);
+			vm.countOverallFiilari = countOverallFiilari;
+			
+			function countOverallFiilari() {
+				var result = 0;
+				angular.forEach(vm.user.fiilari, function(value) {
+					result += value.rate;
+				});
+				return result;
+			}
 		}
 	}
 	
