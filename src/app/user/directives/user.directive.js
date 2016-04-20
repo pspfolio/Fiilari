@@ -27,7 +27,7 @@
 			
 			function countOverallFiilari() {
 				var result = 0;
-				angular.forEach(vm.user.fiilari, function(value) {
+				angular.forEach(vm.fiilarit, function(value) {
 					result += value.rate;
 				});
 				return result;
