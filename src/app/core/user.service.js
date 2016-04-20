@@ -15,7 +15,8 @@
 			User: User,
 			getUsersByCompany: getUsersByCompany,
 			reset: reset,
-			getUserById: getUserById
+			getUserById: getUserById,
+			getFiilaritByUserId: getFiilaritByUserId
 		};
 		
 		return service;
@@ -36,6 +37,14 @@
 		
 		function getUserById(companyId, userId) {
 			return $firebaseObject(firebaseDataService.companies.child(companyId).child('users').child(userId));
+		}
+		
+		function getFiilaritByUserId(companyId, userId) {
+			return $firebaseArray(firebaseDataService.companies
+								.child(companyId)
+								.child('users')
+								.child(userId)
+								.child('fiilari'));
 		}
 				
 		function reset() {

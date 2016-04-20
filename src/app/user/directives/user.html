@@ -8,11 +8,11 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>Datetime</th>
+			<th>Added</th>
 			<th>Fiilari</th>
 		</tr>
 	</thead>
-	<tr ng-repeat="fiilari in vm.user.fiilari | orderBy: '-datetime'">
+	<tr ng-repeat="fiilari in vm.fiilarit | orderBy: '-datetime'">
 		<td>{{fiilari.datetime}}</td>
 		<td>{{fiilari.rate}}</td>
 	</tr>

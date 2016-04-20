@@ -36,7 +36,6 @@
 		}
 		
 		function isActive(path) {
-			console.log($location.path());
 			return path === $location.path();
 		}
 		

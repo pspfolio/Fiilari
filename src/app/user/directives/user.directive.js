@@ -21,8 +21,9 @@
 		
 		function psUserController($routeParams, userService) {
 			var vm = this;
-			vm.user = userService.getUserById(vm.companyId, $routeParams.userId);
 			vm.countOverallFiilari = countOverallFiilari;
+			vm.fiilarit = userService.getFiilaritByUserId(vm.companyId, $routeParams.userId);
+			vm.user = userService.getUserById(vm.companyId, $routeParams.userId);
 			
 			function countOverallFiilari() {
 				var result = 0;
