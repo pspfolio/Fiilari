@@ -1,0 +1,15 @@
+<div class="overall_fiilari">
+	<p>Overall feeling: <span ng-bind="vm.overallFiilari"></span></p>
+</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Added</th>
+			<th>Fiilari</th>
+		</tr>
+	</thead>
+	<tr ng-repeat="fiilari in vm.fiilarit | orderBy: '-datetime'">
+		<td>{{fiilari.datetime}}</td>
+		<td>{{fiilari.rate}}</td>
+	</tr>
+</table>

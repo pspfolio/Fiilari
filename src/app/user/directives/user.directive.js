@@ -18,23 +18,11 @@
 			bindToController: true
 		};
 		
-		psUserController.$inject = ['fiilaritService'];
+		psUserController.$inject = ['userService'];
 		
-		function psUserController(fiilaritService) {
+		function psUserController(userService) {
 			var vm = this;
-
-			fiilaritService.getFiilaritByUserId(vm.companyId, vm.userId).then(function(fiilarit) {
-				vm.fiilarit = fiilarit;
-				countOverallFiilari(fiilarit);
-			});
-			
-			function countOverallFiilari(fiilarit) {
-				var result = 0;
-				angular.forEach(fiilarit, function(value) {
-					result += value.rate;
-				});
-				vm.overallFiilari = result;
-			}
+			vm.user = userService.getUserById(vm.companyId, vm.userId);
 		}
 	}
 	
