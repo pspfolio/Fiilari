@@ -5,11 +5,12 @@
 		.module('app.user')
 		.controller('UserController', UserController);
 	
-	UserController.$inject = ['userService', 'company'];
+	UserController.$inject = ['$routeParams','userService', 'company'];
 	
-	function UserController(userService, company) {
+	function UserController($routeParams, userService, company) {
 		var vm = this;
 		vm.company = company;
+		vm.userId = $routeParams.userId;
 		vm.users = userService.getUsersByCompany(company.uid);
 	}
 }());

@@ -10,19 +10,20 @@
 			restrict: 'E',
 			templateUrl: 'app/user/directives/user.html',
 			scope: {
-				companyId: '='
+				companyId: '=',
+				userId: '='
 			},
 			controller: psUserController,
 			controllerAs: 'vm',
 			bindToController: true
 		};
 		
-		psUserController.$inject = ['$routeParams', 'fiilaritService'];
+		psUserController.$inject = ['fiilaritService'];
 		
-		function psUserController($routeParams, fiilaritService) {
+		function psUserController(fiilaritService) {
 			var vm = this;
 
-			fiilaritService.getFiilaritByUserId(vm.companyId, $routeParams.userId).then(function(fiilarit) {
+			fiilaritService.getFiilaritByUserId(vm.companyId, vm.userId).then(function(fiilarit) {
 				vm.fiilarit = fiilarit;
 				countOverallFiilari(fiilarit);
 			});
