@@ -13,9 +13,9 @@
 		
 		var service = {
 			User: User,
-			getUsersByCompany: getUsersByCompany,
 			reset: reset,
 			getUserById: getUserById,
+			getUsersByCompany: getUsersByCompany
 		};
 		
 		return service;

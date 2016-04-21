@@ -11,8 +11,8 @@
 		var root = new Firebase(firebaseUrl);
 		var service = {
 			root: root,
-			companies: root.child('companies'),
-			ratings: root.child('Ratings')
+			ratings: root.child('Ratings'),
+			companies: root.child('companies')
 		};
 		
 		return service;
