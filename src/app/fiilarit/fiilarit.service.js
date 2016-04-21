@@ -9,7 +9,8 @@
 	
 	function FiilaritService($firebaseArray, firebaseDataService) {
 		var service = {
-			getFiilariRatings: getFiilariRatings
+			getFiilariRatings: getFiilariRatings,
+			getFiilaritByUserId: getFiilaritByUserId
 		};
 		
 		return service;
@@ -17,6 +18,15 @@
 		function getFiilariRatings() {
 			var result = $firebaseArray(firebaseDataService.ratings);
 			return result;
+		}
+		
+		function getFiilaritByUserId(companyId, userId) {
+			return $firebaseArray(firebaseDataService.companies
+								.child(companyId)
+								.child('users')
+								.child(userId)
+								.child('fiilari'))
+								.$loaded();
 		}
 	}
 }());

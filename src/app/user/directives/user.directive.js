@@ -17,20 +17,22 @@
 			bindToController: true
 		};
 		
-		psUserController.$inject = ['$routeParams', 'userService'];
+		psUserController.$inject = ['$routeParams', 'fiilaritService'];
 		
-		function psUserController($routeParams, userService) {
+		function psUserController($routeParams, fiilaritService) {
 			var vm = this;
-			vm.countOverallFiilari = countOverallFiilari;
-			vm.fiilarit = userService.getFiilaritByUserId(vm.companyId, $routeParams.userId);
-			vm.user = userService.getUserById(vm.companyId, $routeParams.userId);
+
+			fiilaritService.getFiilaritByUserId(vm.companyId, $routeParams.userId).then(function(fiilarit) {
+				vm.fiilarit = fiilarit;
+				countOverallFiilari(fiilarit);
+			});
 			
-			function countOverallFiilari() {
+			function countOverallFiilari(fiilarit) {
 				var result = 0;
-				angular.forEach(vm.fiilarit, function(value) {
+				angular.forEach(fiilarit, function(value) {
 					result += value.rate;
 				});
-				return result;
+				vm.overallFiilari = result;
 			}
 		}
 	}
